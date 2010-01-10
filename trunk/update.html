@@ -37,7 +37,7 @@ function init(){
 function loadRep(i){
  online.document.write(Header+'<select style="width:240px;font-size:50px," onchange="parent.loadRep(this.selectedIndex-1)"><option>-Repository list-</option>'+repMenu+'</select>');
  if(rep[i].sex){
-  if(!confirm('This repository contain adult material\nCe dossier contient des script Adult\ncontinue ?')){
+  if(!confirm('This repository contain adult script\nCe dossier contient des script adulte\ncontinue ? continuer ?')){
    online.document.close();
    psp.sysRadioClearDebugLog();
    return;
@@ -54,8 +54,8 @@ function loadRep(i){
   eval(hardGet(rep[i].url+'/'+jsList[x]));
   psp.sysRadioDebugLog(":OK\n");
  }
- for(var y=0;y<SiteList.length;y++){online.document.write('<p style="color:#008888" align="right">'+SiteList[y].Name+'['+SiteList[i].rev+']<a href="http://psp-online.net/cgi/dl.xpd?Code=GoTube/site&Desc='+SiteList[y].Name+'&C='+escape(rep[i].url+'/'+SiteList[y].Name+'.js')+'&NPage=javascript:loadLocalFile()">&#9654;</a></p>')}
- for(var y=0;y<ModList.length ;y++){online.document.write('<p style="color:#880000" align="right">[module]'+ ModList[y]+'<a href="http://psp-online.net/cgi/dl.xpd?Code=GoTube/site&Desc='+ModList[y]+'&C='+escape(rep[i].url+'/'+ModList[y]+'.js')+'&NPage=javascript:loadLocalFile()">&#9654;</a></p>')}
+ for(var y=0;y<SiteList.length;y++){online.document.write('<p style="color:#008888" align="right">'+SiteList[y].Name+'['+SiteList[y].rev+']<a href="http://psp-online.net/cgi/dl.xpd?Code=GoTube/site&Desc='+SiteList[y].Name+'&C='+escape(rep[i].url+'/'+SiteList[y].Name+'.js')+'&NPage=javascript:loadLocalFile()">&#9654;</a></p>')}
+ for(var y=0;y<ModList.length ;y++){online.document.write('<p style="color:#880000" align="right">[module]'+          ModList[y]         +'<a href="http://psp-online.net/cgi/dl.xpd?Code=GoTube/site&Desc='+ ModList[y]     +'&C='+escape(rep[i].url+'/'+ ModList[y]     +'.js')+'&NPage=javascript:loadLocalFile()">&#9654;</a></p>')}
  online.document.close();
  psp.sysRadioClearDebugLog();
 }
