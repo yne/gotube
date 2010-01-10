@@ -1,18 +1,18 @@
 var Lrev = 4;
 var Lrevurl = "http://ultimate-portal.appspot.com/dl.xpd?Code=GoTube&Desc=GoTube-Updater.rev"+Lrev+"&C="+escape('http://sites.google.com/site/psponlinenet/gotube/update.html')+"&NPage=javascript:document.location.reload();";
 var LGT = 1.1;
-var LGTurl = "http://ultimate-portal.appspot.com/dl.xpd?Code=GoTube&Desc=GoTube"+LGT+"&C="+escape('http://sites.google.com/site/psponlinenet/gotube/EBOOT.PBP')+"&A="+escape('http://gotube.googlecode.com/files/GoTube1.1.zip')+"&NPage=javascript:document.location.reload();";
+var LGTurl = "http://ultimate-portal.appspot.com/dl.xpd?Code=GoTube&Desc=GoTube"+LGT+"&C="+escape('http://sites.google.com/site/psponlinenet/gotube/EBOOT.PBP')+"&A="+escape("http://gotube.googlecode.com/files/GoTube"+LGT+".zip")+"&NPage=javascript:document.location.reload();";
 rep = [
 {
   date:"200909090909",
   name:"Biscotte",
   dev: "Biscottealacrevette",
   sex: false,
-  url: 'http://sites.google.com/site/psponlinenet/gotube/repository',
+  url: 'http://gotube.googlecode.com/svn/trunk/biscotte',
 },{
   date:"200912252359",//christmas 23:59
   name:"Crevette", 
   dev: "Biscottealacrevette",
   sex: true,
-  url: "http://sites.google.com/site/psponlinenet/gotube/repositorynsfw",
+  url: "http://gotube.googlecode.com/svn/trunk/crevette",
 }];
