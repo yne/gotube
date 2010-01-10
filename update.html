@@ -24,16 +24,9 @@ function init(){
  psp.sysRadioSetDebugLogTextStyle(96,0,0,255, 96,0,0,255, 30,30,40,0, 1, 2);
  loadLocalFile();
  eval(hardGet('http://gotube.googlecode.com/svn/trunk/repositoryList.txt','Go!Tube updater rev'+rev));
- 
- /* other adress to acces it :
- http://tr.im/JTBx
- http://kl.am/6cJm
- http://tinyurl.com/yg4ygww
- http://bit.ly/GoTubeUpdate
- */
  if(!Lrev){eval(hardGet('http://'+prompt('server seem to be down\nenter a new url:')))}
- if(Lrev>rev){if(confirm('A new version of the updater is avalable\nDownload it ?    ['+rev+'-'+Lrev+']'))document.location=Lrevurl;}
- if(LGT>PSPTube.rev){if(confirm('A new version of GoTube is avalable\nDownload it ?    ['+PSPTube.rev+'-'+LGT+']'))document.location=LGTurl;}
+ if(Lrev>rev){if(confirm('A new version of the updater is avalable\nDownload it ?    ['+rev+'-'+Lrev+']'))document.location="http://ultimate-portal.appspot.com/dl.xpd?Code=GoTube&Desc=GoTube-Updater.rev"+Lrev+"&C="+escape(Lrevurl)+"&NPage=javascript:document.location.reload();";}
+ if(LGT>PSPTube.rev){if(confirm('A new version of GoTube is avalable\nDownload it ?    ['+PSPTube.rev+'-'+LGT+']'))document.location="http://ultimate-portal.appspot.com/dl.xpd?Code=GoTube&Desc=GoTube"+LGT+"&C="+escape(unzipEBOOT)+"&A="+escape(LGTurl)+"&NPage=javascript:document.location.reload();";}
  psp.sysRadioDebugLog("\nGo!Tube Updater rev."+rev+"\nrepository list downloaded\n");
  psp.sysRadioDebugLog("ok:"+c.length+" Byte\n");
  for(var i=0;i<rep.length;i++)repMenu+='<option>'+rep[i].name+'</option>';
@@ -53,11 +46,12 @@ function loadRep(i){
  psp.sysRadioDebugLog("download repository\ncoder:"+rep[i].dev+"\n");
  hardGet(rep[i].url);
  jsList=c.match(/["\/]\w+\.js/g);
+ for(var x=0;x<jsList.length;x++){jsList[x]=jsList[x].substr(1,jsList[x].length)}
  psp.sysRadioDebugLog("download complet : "+jsList.length+" entry\n");
  var SiteList=[];var ModList=[];
  for(var x=0;x<jsList.length;x++){
   psp.sysRadioDebugLog("load file:"+jsList[x]);
-  eval(hardGet(rep[i].url+jsList[x]));
+  eval(hardGet(rep[i].url+'/'+jsList[x]));
   psp.sysRadioDebugLog(":OK\n");
  }
  for(var y=0;y<SiteList.length;y++){online.document.write('<p style="color:#008888" align="right">'+SiteList[y].Name+'['+SiteList[i].rev+']<a href="http://psp-online.net/cgi/dl.xpd?Code=GoTube/site&Desc='+SiteList[y].Name+'&C='+escape(rep[i].url+'/'+SiteList[y].Name+'.js')+'&NPage=javascript:loadLocalFile()">&#9654;</a></p>')}

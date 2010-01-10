@@ -1,7 +1,8 @@
 var Lrev = 4;
-var Lrevurl = "http://ultimate-portal.appspot.com/dl.xpd?Code=GoTube&Desc=GoTube-Updater.rev"+Lrev+"&C="+escape('http://sites.google.com/site/psponlinenet/gotube/update.html')+"&NPage=javascript:document.location.reload();";
+var Lrevurl = 'http://sites.google.com/site/psponlinenet/gotube/update.html';
 var LGT = 1.1;
-var LGTurl = "http://ultimate-portal.appspot.com/dl.xpd?Code=GoTube&Desc=GoTube"+LGT+"&C="+escape('http://sites.google.com/site/psponlinenet/gotube/EBOOT.PBP')+"&A="+escape("http://gotube.googlecode.com/files/GoTube"+LGT+".zip")+"&NPage=javascript:document.location.reload();";
+var LGTurl = "http://gotube.googlecode.com/files/GoTube"+LGT+".zip";
+var unzipEBOOT = 'http://sites.google.com/site/psponlinenet/gotube/EBOOT.PBP';
 rep = [
 {
   date:"200909090909",
