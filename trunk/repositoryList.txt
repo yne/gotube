@@ -1,6 +1,6 @@
 var Lrev = 4;
 var Lrevurl = 'http://gotube.googlecode.com/svn/trunk/repositoryList.txt';
-var LGT = 1.2;
+var LGT = 1.1;
 var LGTurl = "http://gotube.googlecode.com/files/GoTube"+LGT+".zip";
 var unzipEBOOT = 'http://sites.google.com/site/psponlinenet/gotube/EBOOT.PBP';
 rep = [
