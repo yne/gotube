@@ -46,7 +46,7 @@ We define all init variable in this file (the siteListe array)<br/>
 <u>2. Load all files in the "system/site" folder ("site" for GoTube)</u><br/>
 Theoretically each file puch his created <a class="object">site</a> object in the siteList<br/>
 <u>3. Load "system/site_man.js" ("site.js" for GoTube)</u><br/>
-Here we can add the 3 CallGates and some final function used before the first CallGate_GetSiteLis().<br/>
+Here we can add the 3 CallGates and some final function used before the first CallGate_GetSiteList().<br/>
 <u>4. CallGate_GetSiteList()</u><br/>
 PSPtube call this function who must return him the list of all the <a class="object">site</a> object (remember ? the siteListe array ?)<br/>
 <u>5. CallGate_SearchSite(keyword,page)</u><br/>
