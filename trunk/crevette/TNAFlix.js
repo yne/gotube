@@ -1,5 +1,5 @@
 var TNAFlix = new Object();
-TNAFlix.rev            = 2;
+TNAFlix.rev            = 3;
 TNAFlix.SearchDesc     =
 TNAFlix.Name           = "TNAFlix";
 TNAFlix.Search         = function (keyword, page){
