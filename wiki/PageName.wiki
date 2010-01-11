@@ -58,7 +58,7 @@ GoTube 1.0 integrate a new feature, a online updater<br/>
 <u>1. Load local file "PSP/GAME/GoTube/site"</u><br/>
 That why you can't change Gotube's directory<br/>
 <u>2. Get the <a>Repository list</a></u><br/>
-get from  a list of GoTube's repository, if you want add your repository to the list contact me <u style="direction:rtl;unicode-bidi:bidi-override;">moc.liamg@ettevercalaettocsib</u> or send me a PM on PSPgen/mfor. Each dev can register up to 2 repository for exemple :<b>alpha</b>/and/<b>release</b>, or <b>safe</b>/and/<b>NSFW</b> etc...<br/>
+get from  a list of GoTube's repository, if you want add your repository to the list contact me y email or send me a PM on PSPgen/mfor. Each dev can register up to 2 repository for exemple :<b>alpha</b>/and/<b>release</b>, or <b>safe</b>/and/<b>NSFW</b> etc...<br/>
 <u>3. Load online file from Repository</u><br/>
 GoTube load the repository page, supported page are <a href="http://gotube.googlecode.com/svn/trunk/biscotte/">code.google SVN</a>,apache directory listing, and maybe other primary directory listing<br/>
 <u>4. Save .js file</u><br/>
