@@ -1,5 +1,5 @@
 var pornHub = new Object();
-pornHub.rev            = 1;
+pornHub.rev            = 2;
 pornHub.SearchDesc     =
 pornHub.Name           = "pornHub";//PornHub name donesn't work ...
 pornHub.Search         = function (keyword, page){
