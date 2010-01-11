@@ -1,8 +1,8 @@
 var GoogleVideo = new Object();
-GoogleVideo.rev           = 2;
-GoogleVideo.SearchDesc    =
-GoogleVideo.Name          = "GoogleVideo";
-GoogleVideo.Search        = function (keyword, page){
+GoogleVideo.rev        = 2;
+GoogleVideo.SearchDesc =
+GoogleVideo.Name       = "GoogleVideo";
+GoogleVideo.Search     = function (keyword, page){
  var result = new Object();
  result.bypage    = 20;// modifiable
  result.start     = (page-1)*result.bypage+1;
