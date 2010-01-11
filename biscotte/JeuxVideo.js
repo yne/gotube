@@ -1,8 +1,8 @@
 var JeuxVideo = new Object();
-JeuxVideo.rev           = 3;
-JeuxVideo.SearchDesc    = 
-JeuxVideo.Name          = "JeuxVideo";
-JeuxVideo.Search        = function (keyword, page){
+JeuxVideo.rev          = 3;
+JeuxVideo.SearchDesc   = 
+JeuxVideo.Name         = "JeuxVideo";
+JeuxVideo.Search       = function (keyword, page){
  var result = new Object();
  result.bypage    = 10;// static
  result.start     = (page-1)*result.bypage+1;

@@ -1,13 +1,13 @@
 var DailyMotion = new Object();
 DailyMotion.rev        = 3;
 DailyMotion.SearchDesc =
-DailyMotion.Name       = "DailyMotion";//doit etre du meme nom que l'objet !
+DailyMotion.Name       = "DailyMotion";
 DailyMotion.Search     = function (keyword, page){
  var result = new Object();
- result.bypage    = 15;//you can't change it
+ result.bypage    = 15;//static
  result.start     = (page-1)*result.bypage+1;
  c=GetContents('http://www.dailymotion.com/rss/relevance/search/'+escape(keyword)+'/'+page);
- result.total     = -1;//not provided -1 = '?'
+ result.total     = -1;
  result.VideoInfo = new Array();
  while(p=c.indexOf("<item>",p)+1){
   video = new Object();
