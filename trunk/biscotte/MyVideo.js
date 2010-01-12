@@ -1,8 +1,8 @@
-var Myvideo = new Object();
-Myvideo.rev           = 2;
-Myvideo.SearchDesc    =
-Myvideo.Name          = "Myvideo";//doit etre du meme nom que l'objet !
-Myvideo.Search        = function (keyword, page){
+var MyVideo = new Object();
+MyVideo.rev           = 3;
+MyVideo.SearchDesc    =
+MyVideo.Name          = "MyVideo";//doit etre du meme nom que l'objet !
+MyVideo.Search        = function (keyword, page){
  var result = new Object();
  result.bypage    = 20;//static
  result.start     = (page-1)*result.bypage+1;
@@ -22,4 +22,4 @@ Myvideo.Search        = function (keyword, page){
  result.end       = result.start-1+result.VideoInfo.length;
  return result;
 }
-SiteList.push(Myvideo);
+SiteList.push(MyVideo);
