@@ -6,7 +6,7 @@ pornHub.Search         = function (keyword, page){
  var result = new Object();
  result.bypage    = 24;//static
  result.start     = (page-1)*result.bypage+1;
- c=GetContents('http://www.pornhub.com/video/search?search='+keyword+'&x=0&y=0&page='+page);
+ c=GetContents('http://www.pornhub.com/video/search?search='+keyword+'+&x=0&y=0&page='+page);
  result.total     = -1;
  result.VideoInfo = new Array();
  while(p=c.indexOf('<li class="videoblock',p)+1){
@@ -15,10 +15,10 @@ pornHub.Search         = function (keyword, page){
   video.Title        = ext('title="');
   video.ThumbnailURL = ext('src="',"?");
   video.id           = ext("ThumbChange('");
-  video.Description  = ext('%;">')*100+'%\n';
+//video.Description  = ext('%;">')*100+'%\n';
   video.LengthSeconds= ext('duration">',':')*60+ext(':','<')*1;
   video.ViewCount    = ext('<var>')*1;
-  video.Description += ext('"added">')
+  video.Description  = ext('"added">')
   video.URL          = 'GetContents("http://www.pornhub.com/embed_player.php?id='+video.id+'").match(/<flv_url>(.*?)</)[1]';
   result.VideoInfo.push(video);
  }
