@@ -22,5 +22,4 @@ rep = [
   dev: "Zer01ne",
   sex: true,
   url: "http://community-script.googlecode.com/svn/trunk/1ne/",
-},{
 }];
