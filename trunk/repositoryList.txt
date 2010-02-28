@@ -12,12 +12,18 @@ rep = [
   url: 'http://gotube.googlecode.com/svn/trunk/biscotte',
 },{
   date:"200912252359",//christmas 23:59
+  name:"Crevette", 
+  dev: "Biscottealacrevette",
+  sex: true,
+  url: "http://gotube.googlecode.com/svn/trunk/crevette",
+},{
+  date:"201002272230",//2010 02 27 22:30
   name:"Zer0", 
   dev: "Zer01ne",
   sex: false,
   url: "http://community-script.googlecode.com/svn/trunk/Zer0/",
 },{
-  date:"200912252359",//christmas 23:59
+  date:"201002272230",//2010 02 27 22:30
   name:"1ne", 
   dev: "Zer01ne",
   sex: true,
