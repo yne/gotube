@@ -1,5 +1,5 @@
 var DailyMotion = new Object();
-DailyMotion.rev        = 3;
+DailyMotion.rev        = 4;
 DailyMotion.SearchDesc =
 DailyMotion.Name       = "DailyMotion";
 DailyMotion.Search     = function (keyword, page){
@@ -24,7 +24,7 @@ DailyMotion.Search     = function (keyword, page){
   video.ThumbnailURL  = ext('<media:thumbnail url="');
   video.Tags          = ext("<itunes:keywords>").replace(/,/g,"");
   video.SaveFilename  = video.Title+'.flv';
-  video.URL           = 'unescape(GetContents("http://www.dailymotion.com/video/'+video.id+'").match(\'"video", "(.*?)%40\')[1])';
+  video.URL           = 'unescape(GetContents("http://www.dailymotion.com/video/'+video.id+'").match(\'"video", "(.*?)"\')[1])';
   result.VideoInfo.push(video);
  }
  result.end       = result.start-1+result.VideoInfo.length;
