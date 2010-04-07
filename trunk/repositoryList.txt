@@ -29,4 +29,10 @@ rep = [
   dev: "Zer01ne",
   sex: true,
   url: "http://community-script.googlecode.com/svn/trunk/1ne/",
+},{
+  date:"201004072051",//2010 04 07 20:51
+  name:"cloud1250000", 
+  dev: "cloud1250000",
+  sex: false,
+  url: "https://unlock-js.googlecode.com/svn/trunk/cloud1250000/",
 }];
