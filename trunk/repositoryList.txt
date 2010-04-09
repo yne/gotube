@@ -34,5 +34,5 @@ rep = [
   name:"cloud1250000", 
   dev: "cloud1250000",
   sex: false,
-  url: "https://unlock-js.googlecode.com/svn/trunk/cloud1250000",
+  url: "http://unlock-js.googlecode.com/svn/trunk/cloud1250000",
 }];
