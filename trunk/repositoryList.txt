@@ -22,17 +22,17 @@ rep = [
   name:"Zer0", 
   dev: "Zer01ne",
   sex: false,
-  url: "http://community-script.googlecode.com/svn/trunk/Zer0/",
+  url: "http://community-script.googlecode.com/svn/trunk/Zer0",
 },{
   date:"201002272230",//2010 02 27 22:30
   name:"1ne", 
   dev: "Zer01ne",
   sex: true,
-  url: "http://community-script.googlecode.com/svn/trunk/1ne/",
+  url: "http://community-script.googlecode.com/svn/trunk/1ne",
 },{
   date:"201004072051",//2010 04 07 20:51
   name:"cloud1250000", 
   dev: "cloud1250000",
   sex: false,
-  url: "https://unlock-js.googlecode.com/svn/trunk/cloud1250000/",
+  url: "https://unlock-js.googlecode.com/svn/trunk/cloud1250000",
 }];
