@@ -1,5 +1,5 @@
 var YouTube = new Object();
-YouTube.rev           = 7;
+YouTube.rev           = 8;
 YouTube.SearchDesc    = 
 YouTube.Name          = "YouTube";
 YouTube.Search        = function (keyword, page){
@@ -30,11 +30,8 @@ YouTube.Search        = function (keyword, page){
 	return result;
 }
 YouTube.play        = function (id){
-	c=GetContents("http://www.youtube.com/get_video_info?video_id="+id+"&el=embedded&ps=default&eurl=")
-	if(!c.match(/status=fail/))//not protected by WMG
-		return "http://www.youtube.com/get_video?video_id="+id+"&t="+c.match("&token=(.+?)&")[1];
-	c = unescape(GetContents('http://www.youtube.com/watch?v='+id));
-	result = ext('" : "','";').match(/,5\|(.*)&csi_page/)[1];p=0;
-	return result;
+/* get_video don't work from */
+// we use the fmt=5
+	return unescape(GetContents("http://www.youtube.com/watch?v="+id).ext('%2C5%7C','&'))
 }
 SiteList.push(YouTube);
