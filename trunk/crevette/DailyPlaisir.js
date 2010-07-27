@@ -1,12 +1,12 @@
 var DailyPlaisir = new Object();
-DailyPlaisir.rev        = 3;
+DailyPlaisir.rev        = 4;
 DailyPlaisir.SearchDesc =
 DailyPlaisir.Name       = "DailyPlaisir";
 DailyPlaisir.Search     = function (keyword, page){
  var result = new Object();
  result.bypage    = 20;// fixed
  result.start     = (page-1)*result.bypage+1;
- c=GetContents('http://www.dailyplaisir.com/search_result.php?page='+page+'&search_id='+escape(keyword));
+ c=GetContents('http://www.dailyplaisir.com/search_result.php?page='+page+'&search_id='+escape(keyword)+'&sort=adddate');
  result.total     = c.match(/ sur (\d+)/)[1]*1;//not provided -1 = '?'
  result.VideoInfo = new Array();
  while(p=c.indexOf('<div class="imagechannel">',p)+1){
