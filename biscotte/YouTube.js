@@ -1,5 +1,5 @@
 var YouTube = new Object();
-YouTube.rev           = 8;
+YouTube.rev           = 9;
 YouTube.SearchDesc    = 
 YouTube.Name          = "YouTube";
 YouTube.Search        = function (keyword, page){
@@ -30,8 +30,10 @@ YouTube.Search        = function (keyword, page){
 	return result;
 }
 YouTube.play        = function (id){
-/* get_video don't work from */
-// we use the fmt=5
-	return unescape(GetContents("http://www.youtube.com/watch?v="+id).ext('%2C5%7C','&'))
+	c=GetContents("http://www.youtube.com/watch?v="+id);p=0;
+	var url = unescape(ext('" : "','";'));p=0;
+	url = url.ext(",5|","&csi")
+	//PSPTube.log(url+"\n");//debug prupos
+	return url;
 }
 SiteList.push(YouTube);
