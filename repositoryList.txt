@@ -1,0 +1,44 @@
+var Lrev = 4;
+var Lrevurl = 'http://gotube.googlecode.com/svn/trunk/repositoryList.txt';
+var LGT = 1.1;
+var LGTurl = "http://gotube.googlecode.com/files/GoTube"+LGT+".zip";
+var LGTHMMurl = "http://gotube.googlecode.com/files/GoTube"+LGT+".zip";
+var unzipEBOOT = 'http://sites.google.com/site/psponlinenet/gotube/EBOOT.PBP';
+rep = [
+{
+  date:"200909090909",
+  name:"Biscotte",
+  dev: "Biscottealacrevette",
+  sex: false,
+  url: 'http://gotube.googlecode.com/svn/trunk/biscotte',
+},{
+  date:"200912252359",//christmas 23:59
+  name:"Crevette", 
+  dev: "Biscottealacrevette",
+  sex: true,
+  url: "http://gotube.googlecode.com/svn/trunk/crevette",
+},{
+  date:"201012291418",
+  name:"Tinaret", 
+  dev: "Tinaret",
+  sex: false,
+  url: "http://tinaret-scripts.googlecode.com/svn/trunk/Tinaret",
+},{
+  date:"201012291418",
+  name:"Tinaretxxx", 
+  dev: "Tinaret",
+  sex: true,
+  url: "http://tinaret-scripts.googlecode.com/svn/trunk/Tinaretxxx",
+},{
+  date:"201002272230",//2010 02 27 22:30
+  name:"Zer0", 
+  dev: "Zer01ne",
+  sex: false,
+  url: "http://community-script.googlecode.com/svn/trunk/Zer0",
+},{
+  date:"201004072051",//2010 04 07 20:51
+  name:"cloud1250000", 
+  dev: "cloud1250000",
+  sex: false,
+  url: "http://unlock-js.googlecode.com/svn/trunk/cloud1250000",
+}];
