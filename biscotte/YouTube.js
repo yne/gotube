@@ -1,8 +1,8 @@
 var YouTube = new Object();
-YouTube.rev	   = 10;
+YouTube.rev	= 11;
 YouTube.SearchDesc    = 
-YouTube.Name	  = "YouTube";
-YouTube.Search	= function (keyword, page){
+YouTube.Name      = "YouTube";
+YouTube.Search  = function (keyword, page){
 	var result = new Object();
 	result.bypage    = 20;// modifiable
 	result.start     = (page-1)*result.bypage+1;//&begin=250000
@@ -10,12 +10,12 @@ YouTube.Search	= function (keyword, page){
 	result.total     = ext("<openSearch:totalResults>");
 	result.VideoInfo = new Array();
 	while(p=c.indexOf("<entry>",p)+1){
-		v = {attr:2};//neither IDA|npp find this string ...0=RD 1= 2=SRD 3=S
-		v.id            = ext("<id>http://gdata.youtube.com/feeds/api/videos/","</id>");
-		v.Title         = ext("<title type='text'>");
+		v = {attr:3};//neither IDA|npp find this string ...0=RD 1= 2=SRD 3=S
+		v.id	          = ext("<id>http://gdata.youtube.com/feeds/api/videos/","</id>");
+		v.Title	        = ext("<title type='text'>");
 		v.Description   = ext("content type='text'>")+'\nUploader:'+ext("<name>");
 		v.CommentCount  = ext("countHint='")*1;
-		v.Tags          = ext("keywords>").replace(/,/g,"");
+		v.Tags	        = ext("keywords>").replace(/,/g,"");
 		v.LengthSeconds = ext("ds='")*1;
 		v.RatingAvg     = ext("average='")*1;
 		v.RatingCount   = ext("numRaters='")*1;
@@ -29,11 +29,10 @@ YouTube.Search	= function (keyword, page){
 	result.end       = result.start-1+result.VideoInfo.length;
 	return result;
 }
-YouTube.play	= function (id){
+YouTube.play    = function (id){
 	c=GetContents("http://www.youtube.com/watch?v="+id);p=0;
-	var url = unescape(ext('" : "','";'));p=0;
-	url = url.ext(",5|","&csi");
+	var url = unescape(ext(',5|http:','"')).replace(/\\/g,'');p=0;//possible value (if exist) 37 22 35 34 18 5
 	//PSPTube.log(url+"\n");//debug prupos
-	return url;
+	return "http:"+url;
 }
 SiteList.push(YouTube);
