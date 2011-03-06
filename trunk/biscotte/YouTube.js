@@ -1,5 +1,5 @@
 var YouTube = new Object();
-YouTube.rev	= 11;
+YouTube.rev	= 12;
 YouTube.SearchDesc    = 
 YouTube.Name      = "YouTube";
 YouTube.Search  = function (keyword, page){
@@ -31,8 +31,8 @@ YouTube.Search  = function (keyword, page){
 }
 YouTube.play    = function (id){
 	c=GetContents("http://www.youtube.com/watch?v="+id);p=0;
-	var url = unescape(ext(',5|http:','"')).replace(/\\/g,'');p=0;//possible value (if exist) 37 22 35 34 18 5
-	//PSPTube.log(url+"\n");//debug prupos
-	return "http:"+url;
+	var tbl = ext('"fmt_url_map": "').split(/,/);//list the available format in a array
+	var url = tbl[tbl.length-1];//take the lastest entry in the table (lowest quality)
+	return url.substring(url.indexOf("|")+1).replace(/\\/g,"");//format the url
 }
 SiteList.push(YouTube);
