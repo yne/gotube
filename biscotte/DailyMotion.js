@@ -1,6 +1,6 @@
 var DailyMotion = new Object();
-DailyMotion.rev        = 4;
-DailyMotion.SearchDesc =
+DailyMotion.rev        = 6;
+DailyMotion.SearchDesc = "SAVE ONLY"
 DailyMotion.Name       = "DailyMotion";
 DailyMotion.Search     = function (keyword, page){
  var result = new Object();
@@ -24,10 +24,18 @@ DailyMotion.Search     = function (keyword, page){
   video.ThumbnailURL  = ext('<media:thumbnail url="');
   video.Tags          = ext("<itunes:keywords>").replace(/,/g,"");
   video.SaveFilename  = video.Title+'.flv';
-  video.URL           = 'unescape(GetContents("http://www.dailymotion.com/video/'+video.id+'").match(\'"video", "(.*?)"\')[1])';
+  video.URL	          = 'DailyMotion.play("'+video.id+'")';
   result.VideoInfo.push(video);
  }
  result.end       = result.start-1+result.VideoInfo.length;
  return result;
+}
+DailyMotion.play = function(id){
+//dailymotion do not provided flv anymore MP4 are unplayable but can be saved on MS
+	c=GetContents('http://www.dailymotion.com/video/'+id);p=0;
+	var auth = ext('auth%3D','%');
+	var url = "http://www.dailymotion.com/cdn/H264-512x384/video/"+id+".mp4?auth="+auth+"&redirect=0"
+	var video = GetContents(url);
+	return video;
 }
 SiteList.push(DailyMotion);
