@@ -1,5 +1,5 @@
 var YouTube = new Object();
-YouTube.rev	= 12;
+YouTube.rev	= 13;
 YouTube.SearchDesc    = 
 YouTube.Name      = "YouTube";
 YouTube.Search  = function (keyword, page){
@@ -29,10 +29,12 @@ YouTube.Search  = function (keyword, page){
 	result.end       = result.start-1+result.VideoInfo.length;
 	return result;
 }
-YouTube.play    = function (id){
+YouTube.play    = function (id){//fixed by goppend
 	c=GetContents("http://www.youtube.com/watch?v="+id);p=0;
-	var tbl = ext('"fmt_url_map": "').split(/,/);//list the available format in a array
-	var url = tbl[tbl.length-1];//take the lastest entry in the table (lowest quality)
+	var tbl = unescape(ext('fmt_url_map=',';')).split(/,/);//list the available format in a array
+	//PSPTube.log(tbl+"\n");//debugging!
+	var url = unescape(tbl[tbl.length-1]);//take the lastest entry in the table (lowest quality)
+	//PSPTube.log(url+"\n");//more debugging!
 	return url.substring(url.indexOf("|")+1).replace(/\\/g,"");//format the url
 }
 SiteList.push(YouTube);
