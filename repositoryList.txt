@@ -18,6 +18,12 @@ rep = [
   sex: true,
   url: "http://gotube.googlecode.com/svn/trunk/crevette",
 },{
+  date:"201103121813",
+  name:"iserver", 
+  dev: "iserver",
+  sex: true,
+  url: "http://iserver.x10.mx/gotube",
+}{
   date:"201012291418",
   name:"Axolotl", 
   dev: "Axolotl",
