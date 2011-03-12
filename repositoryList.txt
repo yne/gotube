@@ -23,7 +23,7 @@ rep = [
   dev: "iserver",
   sex: true,
   url: "http://iserver.x10.mx/gotube",
-}{
+},{
   date:"201012291418",
   name:"Axolotl", 
   dev: "Axolotl",
