@@ -24,27 +24,9 @@ rep = [
   sex: true,
   url: "http://iserver.web44.net/gotube/",
 },{
-  date:"201012291418",
-  name:"Axolotl", 
-  dev: "Axolotl",
-  sex: false,
-  url: "http://axolotl-dev.googlecode.com/svn/GoTube/Axolotl",
-},{
-  date:"201012291418",
-  name:"Axolotlxxx", 
-  dev: "Axolotl",
+  date:"201105031938",
+  name:"Xiphirx",
+  dev: "Xiphirx",
   sex: true,
-  url: "http://axolotl-dev.googlecode.com/svn/GoTube/Axolotlxxx",
-},{
-  date:"201002272230",//2010 02 27 22:30
-  name:"Zer0", 
-  dev: "Zer01ne",
-  sex: false,
-  url: "http://community-script.googlecode.com/svn/trunk/Zer0",
-},{
-  date:"201004072051",//2010 04 07 20:51
-  name:"cloud1250000", 
-  dev: "cloud1250000",
-  sex: false,
-  url: "http://unlock-js.googlecode.com/svn/trunk/cloud1250000",
+  url: "http://arse.voidteam.net/gotube/",
 }];
