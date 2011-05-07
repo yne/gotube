@@ -28,5 +28,5 @@ rep = [
   name:"Xiphirx",
   dev: "Xiphirx",
   sex: true,
-  url: "http://arse.voidteam.net/gotube/",
+  url: "http://xiphirx.netne.net/gotubescripts/",
 }];
