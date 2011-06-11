@@ -14,7 +14,7 @@ pornHub.Search         = function (keyword, page){
   video.attr         = 1;
   video.Title        = ext('title="');
   video.ThumbnailURL = ext('src="',"?");
-  video.id           = ext("ThumbChange('v");
+  video.id           = ext("ThumbChange('v","'");
 //video.Description  = ext('%;">')*100+'%\n';
   video.LengthSeconds= ext('duration">',':')*60+ext(':','<')*1;
   video.ViewCount    = ext('<var>')*1;
