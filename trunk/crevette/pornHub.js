@@ -14,12 +14,12 @@ pornHub.Search         = function (keyword, page){
   video.attr         = 1;
   video.Title        = ext('title="');
   video.ThumbnailURL = ext('src="',"?");
-  video.id           = ext("ThumbChange('");
+  video.id           = ext("ThumbChange('v");
 //video.Description  = ext('%;">')*100+'%\n';
   video.LengthSeconds= ext('duration">',':')*60+ext(':','<')*1;
   video.ViewCount    = ext('<var>')*1;
   video.Description  = ext('"added">')
-  video.URL          = 'GetContents("http://www.pornhub.com/embed_player.php?id='+video.id+'").match(/<flv_url>(.*?)</)[1]';
+  video.URL          = 'GetContents("http://www.pornhub.com/embed_player.php?id='+video.id+'").match(/<video_url>(.*?)</)[1]';
   result.VideoInfo.push(video);
  }
  result.end       = result.start-1+result.VideoInfo.length;
