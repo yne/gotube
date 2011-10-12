@@ -6,6 +6,12 @@ var LGTHMMurl = "http://gotube.googlecode.com/files/GoTube"+LGT+".zip";
 var unzipEBOOT = 'http://sites.google.com/site/psponlinenet/gotube/EBOOT.PBP';
 rep = [
 {
+  date:"201110122237",
+  name:"iServer",
+  dev: "iServer",
+  sex: true,
+  url: 'http://iserver.comeze.com/gotube/',
+},{
   date:"200909090909",
   name:"Biscotte",
   dev: "Biscottealacrevette",
