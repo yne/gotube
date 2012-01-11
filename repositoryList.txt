@@ -23,10 +23,10 @@ rep = [
   dev: "Biscottealacrevette",
   sex: true,
   url: "http://gotube.googlecode.com/svn/trunk/crevette",
-},{
+}/*,{
   date:"201105031938",
   name:"Xiphirx",
   dev: "Xiphirx",
   sex: true,
   url: "http://xiphirx.netne.net/gotubescripts/",
-}];
+}*/];
