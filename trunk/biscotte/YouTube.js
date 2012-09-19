@@ -1,6 +1,6 @@
 var YouTube = new Object();
-YouTube.rev	   = 1;
-YouTube.SearchDesc    = "Youtube"; //MOD BY CLOUD1250000, original by Xiphirx
+YouTube.rev	   = 2;
+YouTube.SearchDesc    = "Youtube"; //MOD BY CLOUD1250000, original by Xiphirx, fix by DarbyCrash
 YouTube.Name	  = "YouTube";
 YouTube.Search	= function (keyword, page){
 	var result = new Object();
@@ -18,24 +18,24 @@ YouTube.Search	= function (keyword, page){
 		catSpecified = true;
 	}
 	
-	PSPTube.log(keyword+"\n");
+	//PSPTube.log(keyword+"\n");
 	
 	if (keyword.charAt(0) == '@')
 	{
 		sortBy = "published";
-		PSPTube.log("Sort = published\n");
+		//PSPTube.log("Sort = published\n");
 	}
 	
 	
 	if (catSpecified == false)
 	{
 		c=GetContents('http://gdata.youtube.com/feeds/api/videos?q='+escape(keyword)+'&start-index='+result.start+'&max-results='+result.bypage+'&orderby='+sortBy+'&racy=include&v=1');
-		PSPTube.log("No Category\n");
+		//PSPTube.log("No Category\n");
 	}
 	else
 	{
 		c=GetContents('http://gdata.youtube.com/feeds/api/videos?q='+escape(keyword)+'&start-index='+result.start+'&max-results='+result.bypage+'&orderby='+sortBy+'&racy=include&category='+category+'&v=1');
-		PSPTube.log("Category specified\nCategory = "+category+"\n");
+		//PSPTube.log("Category specified\nCategory = "+category+"\n");
 	}
 
 	result.total     = ext("<openSearch:totalResults>");
@@ -68,14 +68,11 @@ YouTube.Search	= function (keyword, page){
 	return result;
 }
 YouTube.play	= function (id){
-	c=GetContents("http://www.youtube.com/watch?v="+id);p=0;
-		var url = unescape(ext('url_encoded_fmt_stream_map','allowscriptaccess'));p=0;
-		//PSPTube.log(c+"\n\n\n");
-		//PSPTube.log("First: "+url+"\n\n");
-		p = url.indexOf("34,url=", 0); preurl = url.ext('fallback_host=','.c.');
-		p = url.indexOf("18,url=", 0); url1 = unescape(url.ext('.c.youtube.com','\u0026'));
-        url = 'http://'+preurl+'.c.youtube.com'+url1; //quality=small
-		//PSPTube.log("Second: "+url+"\n\n");		
-	return url;
+	p = url.indexOf(",itag=5,url=", 0);//34
+	var server = url.ext('fallback_host=','.c.');
+	p = url.indexOf(",itag=5,url=", 0);//18
+	var path = unescape(url.ext('.c.youtube.com','&type=video'));//\u0026
+	var sig = url.ext('&sig=','&quality=');
+	return 'http://'+server+'.c.youtube.com'+path+'&signature='+sig;
 }
 SiteList.push(YouTube);
