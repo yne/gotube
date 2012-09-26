@@ -6,6 +6,12 @@ var LGTHMMurl = "http://gotube.googlecode.com/files/GoTube"+LGT+".zip";
 var unzipEBOOT = 'http://sites.google.com/site/psponlinenet/gotube/EBOOT.PBP';
 rep = [
 {
+  date:"201209251949",
+  name:"Darby_Crash's",
+  dev: "Darby Crash",
+  sex: false,
+  url: 'http://darbycrash.altervista.org/GoTube/list.html',
+},{
   date:"201110122237",
   name:"iServer",
   dev: "iServer",
